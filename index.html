@@ -1,15 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Swiss Traveller</title>
-  <link rel="stylesheet" href="css/style.css">
-</head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Swiss Travel Planner</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Segoe+UI&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet"></head>
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
 <body>
-  <div class="overlay">
-    <h1>Swiss Traveller</h1>
-    <p>Your personal travel planner across Switzerland</p>
-    <button onclick="startPlanning()">Start Planning</button>
+
+  <video autoplay muted loop playsinline id="bg-video">
+    <source src="assets/video/background.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+
+  <div class="center-box">
+    <h1>Swiss Travel Planner</h1>
+    <p class="slogan">Explore Switzerland like a local.</p>
+    <button class="login-btn" onclick="startPlanning()">Log In</button>
   </div>
+
+  <script>
+    function startPlanning() {
+      alert("Login coming soon!");
+    }
+  </script>
+
 </body>
 </html>
