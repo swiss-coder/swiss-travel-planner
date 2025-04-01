@@ -1,0 +1,45 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', sans-serif;
+  height: 100vh;
+  background: url('../images/main.png') no-repeat center center fixed;
+  background-size: cover;
+  position: relative;
+}
+
+/* Add a dark overlay to make text more readable */
+body::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0,0,0,0.4); /* semi-transparent black overlay */
+  z-index: 0;
+}
+
+.overlay {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  padding-top: 20vh;
+  color: white;
+}
+
+h1 {
+  font-size: 5rem;
+  margin-bottom: 1rem;
+}
+
+button {
+  margin-top: 20px;
+  padding: 10px 24px;
+  font-size: 1.2rem;
+  background-color: #ffffffcc;
+  color: #333;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
