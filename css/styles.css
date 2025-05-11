@@ -1,0 +1,325 @@
+/* GLOBAL RESET */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body, html {
+  height: 100%;
+  font-family: 'Segoe UI', sans-serif;
+  scroll-behavior: smooth;
+}
+
+/* INDEX PAGE – VIDEO BACKGROUND */
+body.index-page {
+  overflow: hidden;
+  color: white;
+}
+
+#index-page #bg-video,
+#index-page video#bg-video,
+body.index-page #bg-video {
+  position: fixed;
+  top: 0;
+  left: 0;
+  min-width: 100%;
+  min-height: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+
+.center-box {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.center-box h1 {
+  font-weight: 300;
+  font-size: 3rem;
+  letter-spacing: 2px;
+  margin-bottom: 10px;
+  color: white;
+}
+
+.slogan {
+  font-family: 'Great Vibes', cursive;
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+  color: white;
+  opacity: 0.9;
+}
+
+.start-button {
+  display: inline-block;
+  padding: 1rem 2rem;
+  font-size: 1.2rem;
+  color: white;
+  background-color: #ff4d4d;
+  text-decoration: none;
+  border-radius: 8px;
+  transition: background-color 0.3s ease;
+}
+
+.start-button:hover {
+  background-color: #e63946;
+}
+
+/* FORM PAGE BACKGROUND */
+.form-page {
+  background-image: url('../assets/images/background.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  padding: 3rem 1rem;
+  backdrop-filter: blur(6px);
+  overflow-y: auto;
+}
+
+/* FORM CONTAINER */
+.form-wrapper {
+  background-color: rgba(255, 255, 255, 0.95);
+  padding: 2.5rem;
+  border-radius: 16px;
+  max-width: 900px;
+  width: 100%;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+  color: #333;
+}
+
+/* FORM ELEMENTS */
+form input,
+form select,
+form button {
+  width: 100%;
+  padding: 0.75rem;
+  margin-top: 0.5rem;
+  margin-bottom: 1.2rem;
+  font-size: 1rem;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  background-color: #fff;
+  color: #000;
+}
+
+form button {
+  background-color: #3399ff;
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+form button:hover {
+  background-color: #267acc;
+}
+
+/* OPTION SELECTORS */
+.option-box {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 0.5rem;
+}
+
+.option-item {
+  background-color: #f2f2f2;
+  padding: 0.7rem 1.2rem;
+  border-radius: 10px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  border: 2px solid transparent;
+  min-width: 120px;
+  transition: background-color 0.3s ease;
+}
+
+.option-item input {
+  margin-right: 0.5rem;
+}
+
+.option-item input:checked + span {
+  font-weight: bold;
+}
+
+.option-item:has(input:checked) {
+  background-color: #cce5ff;
+  border-color: #3399ff;
+}
+
+/* RESULTS PAGE DESTINATIONS */
+.destination-card {
+  background-color: white;
+  padding: 1.5rem;
+  border-radius: 12px;
+  margin-bottom: 2rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease;
+  color: #333;
+}
+
+.destination-card:hover {
+  transform: translateY(-4px);
+}
+
+.destination-card img {
+  width: 100%;
+  max-height: 200px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin: 0.75rem 0;
+}
+
+/* RESPONSIVE */
+@media (max-width: 600px) {
+  .center-box h1 {
+    font-size: 2.2rem;
+  }
+  .start-button {
+    font-size: 1rem;
+    padding: 0.8rem 1.5rem;
+  }
+  .form-wrapper {
+    padding: 1.5rem;
+  }
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1rem;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.form-group label {
+  font-size: 0.9rem;
+  font-weight: 500;
+  margin-bottom: 0.3rem;
+}
+
+#price-range {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+#price-range input {
+  width: 120px;
+  font-size: 1rem;
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+
+@media (max-width: 600px) {
+  #price-range input {
+    width: 100%;
+  }
+}
+
+.destination-card img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  margin-bottom: 10px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+/* ---------- Modify Trip Button ---------- */
+#modify-trip-container {
+  margin: 30px 0;
+  text-align: center;
+}
+
+#modify-trip {
+  background-color: #0057a0;
+  color: white;
+  padding: 12px 24px;
+  font-size: 16px;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+#modify-trip:hover {
+  background-color: #003f73;
+}
+
+
+/* ---------- Footer Styling ---------- */
+#trip-footer {
+  margin-top: 60px;
+  text-align: center;
+  padding: 30px 0;
+  border-top: 1px solid #ccc;
+  color: #444;
+}
+
+#trip-footer a {
+  display: inline-block;
+}
+
+#trip-footer img {
+  height: 48px;
+  margin-bottom: 8px;
+  cursor: pointer;
+}
+
+#trip-footer p {
+  font-size: 15px;
+  margin: 0;
+}
+
+#pdf-button-container {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+#download-pdf {
+  background-color: #28a745;
+  color: white;
+  padding: 12px 24px;
+  font-size: 16px;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#download-pdf:hover {
+  background-color: #1e7e34;
+}
+
+.destination-card {
+  position: relative;
+  padding-bottom: 3rem; /* Add padding to the bottom for the map button */
+}
+
+.map-button {
+  position: absolute;
+  bottom: 1rem;
+  right: 1rem;
+  background-color: #e0f0ff;
+  border-radius: 8px;
+  padding: 0.4rem 0.8rem;
+  font-size: 0.9rem;
+  text-decoration: none;
+  color: black;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+.trip-title {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}

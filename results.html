@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Your Swiss Trip Plan</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <style>
+    .destination-card {
+      border: 1px solid #ccc;
+      border-radius: 12px;
+      padding: 1rem;
+      margin-bottom: 1.5rem;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      transition: transform 0.2s ease;
+      background-color: #fff;
+    }
+    .destination-card:hover {
+      transform: scale(1.01);
+    }
+    .destination-card img {
+      width: 100%;
+      max-height: 200px;
+      object-fit: cover;
+      border-radius: 8px;
+      margin-bottom: 0.75rem;
+    }
+    .form-wrapper p {
+      font-size: 1.1rem;
+    }
+  </style>
+</head>
+<body class="form-page results-page">
+  <div class="form-wrapper">
+    <h2 class="trip-title">Your Smartly Optimized Swiss Journey Plan</h2>
+    <!-- Trip Summary -->
+    <div id="trip-summary">Loading your itinerary...</div>
+
+    <!-- Modify Button -->
+    <div id="modify-trip-container">
+      <button id="modify-trip">Modify My Trip</button>
+    </div>
+
+    <!-- Footer -->
+    <footer id="trip-footer">
+      <a href="https://www.sbb.ch/en" target="_blank">
+        <img src="assets/images/sbb-logo.png" alt="SBB Logo" style="max-height: 40px;" />
+      </a>
+      <p>Buy your train tickets with the Swiss Federal Railways.</p>
+    </footer>
+  </div>
+
+  <!-- Scripts -->
+  <script src="js/locations.js"></script>
+  <script src="js/results.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const modifyBtn = document.getElementById("modify-trip");
+      if (modifyBtn) {
+        modifyBtn.addEventListener("click", () => {
+          window.location.href = "form.html";
+        });
+      }
+    });
+  </script>
+</body>
+</html>

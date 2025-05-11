@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Plan Your Swiss Adventure</title>
+  <link rel="stylesheet" href="css/styles.css" />
+  <style>
+    /* Make disabled activities look gray */
+    input[name="activities"]:disabled + span {
+      color: #999;
+    }
+  </style>
+</head>
+<body class="form-page">
+  <div class="form-wrapper">
+    <h2>Plan Your Swiss Adventure</h2>
+    <form id="trip-form">
+      <label for="start-date">Start Date:</label>
+      <input type="date" id="start-date" name="start-date" required />
+
+      <label for="end-date">End Date:</label>
+      <input type="date" id="end-date" name="end-date" required />
+
+      <label for="entry">Entry Point:</label>
+      <select id="entry" name="entry" required>
+        <option value="Zurich">Zurich</option>
+        <option value="Geneva">Geneva</option>
+        <option value="Basel">Basel</option>
+      </select>
+
+      <label for="exit">Exit Point:</label>
+      <select id="exit" name="exit" required>
+        <option value="Zurich">Zurich</option>
+        <option value="Geneva">Geneva</option>
+        <option value="Basel">Basel</option>
+      </select>
+
+      <fieldset>
+        <legend>What type of destinations do you prefer?</legend>
+        <div class="option-box">
+          <label class="option-item">
+            <input type="checkbox" name="style" value="nature" />
+            <span>Nature</span>
+          </label>
+          <label class="option-item">
+            <input type="checkbox" name="style" value="city" />
+            <span>City</span>
+          </label>
+        </div>
+      </fieldset>
+
+      <fieldset>
+        <legend>Activities you enjoy:</legend>
+        <div class="option-box">
+          <label class="option-item"><input type="checkbox" name="activities" value="hiking" /><span>Hiking</span></label>
+          <label class="option-item"><input type="checkbox" name="activities" value="skiing" /><span>Skiing</span></label>
+          <label class="option-item"><input type="checkbox" name="activities" value="museums" /><span>Museums</span></label>
+          <label class="option-item"><input type="checkbox" name="activities" value="shopping" /><span>Shopping</span></label>
+          <label class="option-item"><input type="checkbox" name="activities" value="spa" /><span>Spa</span></label>
+          <label class="option-item"><input type="checkbox" name="activities" value="festivals" /><span>Festivals</span></label>
+          <label class="option-item"><input type="checkbox" name="activities" value="photography" /><span>Photography</span></label>
+          <label class="option-item"><input type="checkbox" name="activities" value="adventure sports" /><span>Adventure Sports</span></label>
+          <label class="option-item"><input type="checkbox" name="activities" value="wellness" /><span>Wellness</span></label>
+          <label class="option-item"><input type="checkbox" name="activities" value="culture" /><span>Culture</span></label>
+          <label class="option-item"><input type="checkbox" name="activities" value="walking" /><span>Walking</span></label>
+          <label class="option-item"><input type="checkbox" name="activities" value="sightseeing" /><span>Sightseeing</span></label>
+        </div>
+      </fieldset>
+
+      <label for="group">Who are you traveling with?</label>
+      <select id="group" name="group">
+        <option value="solo">Solo</option>
+        <option value="couple">Couple</option>
+        <option value="family">Family with Kids</option>
+        <option value="friends">Group of Friends</option>
+      </select>
+
+      <button type="submit">See Suggestions</button>
+    </form>
+  </div>
+
+  <script src="js/form.js"></script>
+</body>
+</html>

@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Swiss Travel Planner</title>
-  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/styles.css" />
   <link href="https://fonts.googleapis.com/css2?family=Segoe+UI&display=swap" rel="stylesheet" />
   <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet"></head>
   <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
@@ -18,12 +18,12 @@
   <div class="center-box">
     <h1>Swiss Travel Planner</h1>
     <p class="slogan">Explore Switzerland like a local.</p>
-    <button class="login-btn" onclick="startPlanning()">Log In</button>
+    <a href="form.html" class="start-button">Plan Your Travel</a>
   </div>
 
   <script>
     function startPlanning() {
-      alert("Login coming soon!");
+      window.location.href = "login.html"; 
     }
   </script>
 
